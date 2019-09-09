@@ -25,9 +25,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
+//import  'react-bootstrap';
+//import 'bulma';
+import './reset.css'
 import './index.css';
 import App from './app/container/App';
 import store from './store';

@@ -26,7 +26,8 @@ import {connect} from 'react-redux';
 
 import NavigationBar from '../components/navigation_bar';
 //import Loading  from '../components/loading';
-import window from '../assets/png/window.png'
+import window from '../assets/png/window.jpg'
+import design from '../assets/png/DESIGNDESIGN.png'
 
 
 //import { onEncryptionHover }  from '../actions/navigationActions';
@@ -39,21 +40,28 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
         <NavigationBar/>
-        <section class="hero start is-fullheight">
-        <img className='hero image' alt src={window}/>
-        <h1 className="imagetext">Vi hjälper företag att utveckla konverterande,<br/> effektiva och prisvärda hemsidor.<br/>Samtidigt som ditt varumärke sticker ut och<br/>kommunicerar effektivt med dina kunder.</h1>
-        </section>
-        <section class="hero is-info is-fullheight">
-
-        </section>
-        <section class="hero is-success is-fullheight"></section>
-        <section class="hero is-info is-fullheight"></section>
-        <section class="hero is-success is-fullheight"></section>
-        <section class="hero is-info is-fullheight"></section>
-        <section class="hero is-success is-fullheight"></section>
-        <section class="hero is-info is-fullheight"></section>
-        <section class="hero is-success is-fullheight"></section>
         </header>
+        <section class="fullscreen primary_color">
+        <div className="window-frame">
+          <div className="window-content primary_variant_color"></div>
+        </div>
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
+        <section class="fullscreen">
+        </section>
       </div>
     )
   }

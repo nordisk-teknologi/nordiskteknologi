@@ -1,57 +1,103 @@
-.loading-background {
-  background: #2e2e2e;
-  height: 100%;
-  width: 100%;
-}
-.loading {
-  position: fixed; /* or absolute */
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+@font-face {
+  font-family: "SF Compact Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/app/assets/fonts/SF-Compact-Display-Regular.otf"); /* IE9 Compat Modes */
 }
 
-.hero {
-  min-height: 100hv;
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.primary_color {
+  background: #70e6d4;
 }
 
-.hero.start {
-  background-color: #70e6d4;
-  color: #fff;
+.primary_variant_color {
+  background: #fcec6e;
 }
 
-.hero.image {
-  width: 55%;
-  height: 80%;
-  top: 100px;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%);
+.secondary_color {
+  color: #000;
+}
+
+.secondary_variant_color {
+  background: #66ff00;
+}
+
+.background_color {
+  background: #ffffff;
+}
+
+.surface_color {
+  background: #fbfbfb;
+}
+
+.error_color {
+  color: #b00020;
 }
 
 .navbar {
-  background-color: #2e2e2e;
-  height: 54px;
+  z-index: 10;
+  overflow: hidden;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  background: #2e2e2e;
 }
 
-.navbar-item,
-.navbar-link {
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
   color: #70e6d4;
 }
 
-.imagetext {
+.navbar a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu {
   position: absolute;
-  font-size: 40px;
-  line-height: 55px;
-  /* or 137% */
-  color: #030304;
+  width: 107px;
+  height: 100%;
+  background: #111111;
+}
+
+.fullscreen {
+  min-height: 100vh;
+}
+
+.window-frame {
+  z-index: 0;
   position: absolute;
-  left: 30%;
-  right: 20%;
-  top: 20%;
-  font-family: SF Compact Display;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 580px;
+  min-width: 1000px;
+  background: #ffffff;
+  border: 6px solid #2e2e2e;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.window-content {
+  z-index: 1;
+  position: absolute;
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 550px;
+  min-width: 1000px;
+  border: 6px solid #2e2e2e;
 }
