@@ -21,15 +21,18 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+//import promise from 'redux-promise-middleware';
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
+//import navigationReducer from './app/reducers/navigationReducer';
+import user from './app/reducers/userReducer';
 
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export default createStore(
+    combineReducers({
+        user
+    }),
+    {},
+    applyMiddleware(logger, thunk)
+);

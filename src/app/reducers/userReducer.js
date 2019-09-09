@@ -21,15 +21,26 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+const userReducer = (state = {
+    name: "Max",
+    age: 27
+}, action) => {
+    switch (action.type) {
+        case "SET_NAME_FULFILLED":
+            state = {
+                ...state,
+                name: action.payload
+            };
+            break;
+        case "SET_AGE":
+            state = {
+                ...state,
+                age: action.payload
+            };
+            break;
+        default:
+            return state
+    }
+};
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
-
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export default userReducer;

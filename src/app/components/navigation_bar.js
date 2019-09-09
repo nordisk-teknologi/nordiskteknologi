@@ -22,14 +22,28 @@
  */
 
 import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
+class NavigationBar extends React.Component {
+    render(){
+        return(
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" >
+                            Home
+                        </a>
+                    </div>
+                    <div class="navbar-end"> 
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        </a>   
+                    </div>
+                </div>
+            </nav>
+        )
+    }
+}
 
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export default NavigationBar;

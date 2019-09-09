@@ -21,15 +21,21 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
-
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export const User = (props) => {
+    return (
+        <div>
+            <div className="row">
+                <div className="col-xs-12">
+                    <h1>The User Page</h1>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-xs-12">
+                    <p>User Name: {props.username}</p>
+                </div>
+            </div>
+        </div>
+    );
+}

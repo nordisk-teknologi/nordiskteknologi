@@ -21,15 +21,24 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+export function setName(name) {
+    // return dispatch => {
+    //     setTimeout(() => {
+    //         dispatch({
+    //             type: "SET_NAME",
+    //             payload: name
+    //         });
+    //     }, 2000);
+    // }
+    return {
+        type: "SET_NAME",
+        payload: name
+    };
+}
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
-
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export function setAge(age) {
+    return {
+        type: "SET_AGE",
+        payload: age
+    };
+}

@@ -21,15 +21,36 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+const navigationReducer = (state = {
+    encryption: {
+        lang: {
+            sv: {
+                status: true,
+                after: false,
+                before: true,
+                afterText: "VI GÖR DIN HEMSIDA SÄKER", 
+                beforeText: "KRYPTERING" 
+            },
+            en: {
+                status: false,
+                after: false,
+                before: true,
+                afterText: "", 
+                beforeText: "" 
+            },
+        },
+    },
+}, action) => {
+    switch (action.type) {
+        case 'on_encryption_hover':
+            state = {
+                ...state,
+                encryption: action.payload
+            };
+            break;
+        default:
+            return state
+    };
+};
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
-
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export default navigationReducer;

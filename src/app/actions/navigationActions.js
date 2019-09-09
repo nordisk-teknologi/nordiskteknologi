@@ -21,15 +21,11 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
-
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+module.exports = {
+    onEncryptionHover: (payload) => {
+        return {
+            type: 'on_encryption_hover',
+            payload: payload
+        }
+    }
+};

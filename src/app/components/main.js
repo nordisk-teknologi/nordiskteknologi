@@ -21,15 +21,24 @@
  *   SOFTWARE.
  */
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
 
-import  'react-bootstrap';
-import './reset.css';
-import 'bulma';
-import './index.css';
-import App from './app/container/App';
-import store from './store';
-
-render(<Provider store={store}><App /></Provider>, window.document.getElementById('root'));
+export const Main = (props) => {
+    return (
+        <div>
+            <div className="row">
+                <div className="col-xs-12">
+                    <h1>The Main Page</h1>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-xs-12">
+                    <button
+                        className="btn btn-primary"
+                        onClick={() => props.changeUsername('Anna')}>Change the Username
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
