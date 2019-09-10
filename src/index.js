@@ -25,10 +25,12 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-//import  'react-bootstrap';
+
 //import 'bulma';
-import './reset.css'
+import './reset.css';
 import './index.css';
+import 'bootstrap';
+import  'react-bootstrap';
 import App from './app/container/App';
 import store from './store';
 

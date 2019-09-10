@@ -20,17 +20,71 @@
  *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *   SOFTWARE.
  */
-
+/*
 import React from 'react';
+import { Navbar, Form, InputGroup, FormControl,Button } from 'react-bootstrap';
 
 class NavigationBar extends React.Component {
     render(){
         return(
             <nav class="navbar sticky" role="navigation" aria-label="main navigation">
-                <a href="#">Home</a>
-                <a href="#">Home</a>
-                <a href="#">Home</a>
+                <a className="active" href="#">Om oss</a>
+                <a href="#">Design</a>
+                <a href="#">Copywrite</a>
+                <a href="#">SEO</a>
+                <a href="#">Programmering</a>
+                <a href="#">Kryptering</a>
+                <a href="#">Vision</a>
+                <a href="#">Kontakt</a>
             </nav>
+            <Navbar className="bg-light justify-content-between">
+            <Form inline>
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                  placeholder="Username"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+            </Form>
+            <Form inline>
+              <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
+              <Button type="submit">Submit</Button>
+            </Form>
+          </Navbar>
+        )
+    }
+}
+
+export default NavigationBar;*/
+
+import React from 'react';
+import { Navbar, Form, InputGroup, FormControl,Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
+class NavigationBar extends React.Component {
+    render(){
+        return(
+            <Navbar className="navbar justify-content-between">
+            <Form inline>
+                <a className="active" href="#">Om oss</a>
+                <a href="#">Design</a>
+                <a href="#">Copywrite</a>
+                <a href="#">SEO</a>
+                <a href="#">Programmering</a>
+                <a href="#">Kryptering</a>
+                <a href="#">Vision</a>
+                <a href="#">Kontakt</a>
+            </Form>
+            <Form inline>
+              
+              <spen className="menu"><FontAwesomeIcon icon={faBars} className="center"/></spen>
+            </Form>
+          </Navbar>
         )
     }
 }

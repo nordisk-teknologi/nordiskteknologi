@@ -29,8 +29,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import NavigationBar from '../components/navigation_bar';
 //import Loading  from '../components/loading';
-import google from '../assets/png/google-section.png';
-import monk from '../assets/png/monk.png';
+import google from '../assets/png/google.png'
+import design from '../assets/png/design.png'
 
 
 //import { onEncryptionHover }  from '../actions/navigationActions';
@@ -130,22 +130,17 @@ class App extends React.Component {
         <section class="fullscreen">
         <Container className="margin-top">
               <Row>
-              <Col>
-              <img alt="" src={google}/>
-              </Col>
+              <Card className="google-card">
+                <img alt="" className="google-image" src={google}/>
+                <span className="google-card-icon-frame"><FontAwesomeIcon icon={faSearch} className="google-card-icon center" size="2x" /></span>
+                <Card.Body className="google-card-text">Vi hjälper ditt företag att synas på Google med SEO. Med briljant sökoptimering hittar fler kunder din hemsida. En bra position på google ökar både konvertering och försäljning.</Card.Body>
+              </Card>
               </Row>
         </Container>
-        </section>
-        <section class="fullscreen pro">
         </section>
         <section class="fullscreen">
-        <Container className="margin-top">
-              <Row>
-              <Col>
-              <img alt="" className="monk" src={monk}/>
-              </Col>
-              </Row>
-        </Container>
+        </section>
+        <section class="fullscreen">
         </section>
         <section class="fullscreen">
         </section>
