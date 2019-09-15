@@ -24,9 +24,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-//import promise from 'redux-promise-middleware';
 
-//import navigationReducer from './app/reducers/navigationReducer';
 import user from './app/reducers/userReducer';
 
 export default createStore(

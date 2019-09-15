@@ -1,7 +1,7 @@
 @font-face {
   font-family: SF Compact Display;
   font-style: normal;
-  src: url("../src/app/assets/fonts/SF-Compact-Display-Regular.otf"); /* IE9 Compat Modes */
+  src: url('../src/app/assets/fonts/SF-Compact-Display-Regular.otf'); /* IE9 Compat Modes */
 }
 
 .primary_color {
@@ -41,20 +41,20 @@
   letter-spacing: 0.02em;
   z-index: 10;
   overflow: hidden;
-  height: 50px;
+  height: 70px;
   left: 0px;
   top: 0px;
-  background: #2e2e2e;
+  background: #fbfbfb;
 }
 
 .navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #444444;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
 }
 
 .navbar a:hover {
@@ -79,9 +79,18 @@
   position: absolute;
   right: 0;
   width: 107px;
-  height: 53px;
-  background: #111111;
+  height: 70px;
+  background: #f2f2f2;
   color: #70e6d4;
+}
+
+.menu-left {
+  position: absolute;
+  left: 3.75%;
+  right: 95.62%;
+  top: 4.92%;
+  bottom: 90.09%;
+  color: #ffffff;
 }
 
 .fullscreen {
@@ -183,11 +192,11 @@
 }
 
 .space-left {
-  margin-left: 98px;
+  margin-left: 135px;
 }
 
 .design {
-  background: url("../src/app/assets/png/design.png") no-repeat center center;
+  background: url('../src/app/assets/svg/design.svg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -370,7 +379,7 @@
 
 .pro {
   height: 100vh;
-  background: url("../src/app/assets/png/prog.PNG") no-repeat center center;
+  background: url('../src/app/assets/png/prog.PNG') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -384,4 +393,60 @@
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -0%);
+}
+
+.fullscreen-menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2e2e2e;
+}
+
+.fullscreen-menu-active {
+  display: block !important;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2e2e2e;
+}
+
+.fullscreen-menu-close {
+  color: #ffffff;
+  float: left;
+}
+
+.menu-Instagram {
+  position: absolute;
+  left: 95.5%;
+  right: 3.07%;
+  top: 4.72%;
+  bottom: 92.69%;
+  color: #70e6d4;
+}
+
+.menu-Facebook {
+  position: absolute;
+  left: 93.04%;
+  right: 6.33%;
+  top: 4.82%;
+  bottom: 92.72%;
+  color: #70e6d4;
+}
+
+.menu-Linkedin {
+  position: absolute;
+  left: 89.84%;
+  right: 8.82%;
+  top: 4.92%;
+  bottom: 92.69%;
+  color: #70e6d4;
 }

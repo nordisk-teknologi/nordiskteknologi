@@ -49,8 +49,9 @@ const navigationReducer = (state = {
             };
             break;
         default:
-            return state
+            return state;
     };
+    return state;
 };
 
 export default navigationReducer;

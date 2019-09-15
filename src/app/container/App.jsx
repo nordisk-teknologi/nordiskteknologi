@@ -20,25 +20,36 @@
  *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *   SOFTWARE.
  */
+/* eslint-disable max-len */
+import React from 'react';
+import { connect } from 'react-redux';
+import Layout from './layout';
+import NavigationBar from '../components/navigation';
+import { setName } from '../actions/userActions';
 
-import React from "react";
+const App = () => {
+  return(
+    <div className="App">
+      <NavigationBar />
+      <section className="fullscreen">
+        <Layout />
+      </section>
+    </div>
+  )
+}
 
-export const Main = (props) => {
-    return (
-        <div>
-            <div className="row">
-                <div className="col-xs-12">
-                    <h1>The Main Page</h1>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-xs-12">
-                    <button
-                        className="btn btn-primary"
-                        onClick={() => props.changeUsername('Anna')}>Change the Username
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
 };
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setName: (name) => {
+      dispatch(setName(name));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

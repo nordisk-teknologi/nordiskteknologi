@@ -20,28 +20,35 @@
  *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *   SOFTWARE.
  */
+import React from 'react';
 
-const userReducer = (state = {
-    name: "Max",
-    age: 27
-}, action) => {
-    switch (action.type) {
-        case "SET_NAME_FULFILLED":
-            state = {
-                ...state,
-                name: action.payload
-            };
-            break;
-        case "SET_AGE":
-            state = {
-                ...state,
-                age: action.payload
-            };
-            break;
-        default:
-            return state
-    }
-    return state;
-};
+const Window = ({ windows , closeWindow}) => {
+  const windowList = windows.length ? (
+    windows.map(window => {
+      const style = `window-frame back-${window.id}`;
+      return (
+        <div className={style} key={window.id}>
+          <button className="window-frame-item error_color" onClick={() => { closeWindow(window.id) }} type="button">{window.close}</button>
+          <button className="window-frame-item primary_variant_color" onClick={() => { closeWindow(window.id) }} type="button">{window.close}</button>
+          <button className="window-frame-item secondary_variant_color" onClick={() => { closeWindow(window.id) }} type="button">{window.close}</button>
+          <div className="window-content primary_variant_color">
+            <p className="window-content-title">
+              {window.title}
+            </p>
+            <p className="window-content-subtitle">
+              {window.description}
+            </p>
+          </div>
+        </div>
+      )
+    })
+  ) : (<p>no content</p>)
+  
+  return(
+    <div>
+      {windowList}
+    </div>
+  )
+}
 
-export default userReducer;
+export default Window;

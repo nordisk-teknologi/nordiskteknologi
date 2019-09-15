@@ -22,15 +22,42 @@
  */
 
 import React from 'react';
+import Window from '../components/window';
 
 class Layout extends React.Component {
-    render(){
-        return(
-            <div>
-                the app
-            </div>
-        )
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      windows: [
+        { id: 1, content: '1', close: '', open: 'close', info: 'info', title: 'hello', description: '' },
+        { id: 2, content: '2', close: '', open: 'close', info: 'info', title: 'how are you', description: '' },
+        { id: 3, content: '1', close: '', open: 'close', info: 'info', title: 'im good', description: '' },
+        { id: 4, content: '2', close: '', open: 'close', info: 'info', title: '', description: '' },
+        { id: 5, content: '1', close: '', open: 'close', info: 'info', title: '', description: '' },
+        { id: 6, content: '2', close: '', open: 'close', info: 'info', title: '', description: '' },
+      ]
     }
-}
+  }
+
+  closeWindow = (id) => {
+    const { windows }  = this.state
+    const windowsUpdateState = windows.filter(window => {
+      return window.id !== id
+    });
+    this.setState({
+      windows: windowsUpdateState
+    });
+  }
+
+  render() {
+    const { windows } = this.state;
+    return (
+      <div>
+        <Window windows={windows} closeWindow={this.closeWindow} />
+      </div>
+    )
+  }
+} 
 
 export default Layout;

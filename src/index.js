@@ -26,7 +26,6 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
 
-//import 'bulma';
 import './reset.css';
 import './index.css';
 import 'bootstrap';
