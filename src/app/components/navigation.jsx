@@ -22,37 +22,40 @@
  */
 
 import React from 'react';
-import { Navbar, Form } from 'react-bootstrap';
+import { Navbar, Form, Container, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faBars } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import navigationStates from '../states/navigation.state';
 
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      show: false,
-      style: 'fullscreen-menu',
-    }
+    this.state = navigationStates;
   }
 
   closeMenu = () => {
-    const { show } = this.state;
-    if (show === false) {
-        this.setState({
+    const { menu } = this.state;
+    if (menu.show === false) {
+      this.setState({
+        menu: {
           show: true,
           style: 'fullscreen-menu-active'
-        })
+        }
+      })
     } else {
-        this.setState({
+      this.setState({
+        menu: {
           show: false,
           style: 'fullscreen-menu'
-        })
+        }
+      })
     }
-}
+  }
 
   render() {
-    const { style } = this.state
+    const { menu } = this.state
+    const { encryption, seo, copywrite, design, programming, vision, nordiskTeknologi} = this.state
     return (
       <>
         <Navbar className="navbar justify-content-between">
@@ -73,11 +76,69 @@ class NavigationBar extends React.Component {
           
         </Navbar>
         <>
-          <section className={style}>
+          <section className={menu.style}>
             <spen className="menu-left" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faChevronLeft} className="center" /></spen>
-            <spen className="menu-Linkedin" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faLinkedin} className="center" /></spen>
-            <spen className="menu-Facebook" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faFacebook} className="center" /></spen>
+            <spen className="menu-Linkedin" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faLinkedinIn} className="center" /></spen>
+            <spen className="menu-Facebook" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faFacebookF} className="center" /></spen>
             <spen className="menu-Instagram" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faInstagram} className="center" /></spen>
+            <Container>
+              <Col className="justify-content-center">
+                <Row>
+                  <div>
+                    <div className="menu-list">
+                      <span id="menu">
+                        <a href="/">
+                          <p>{encryption.lang.sv.afterText}</p>
+                          <span className="button">{encryption.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                      <span id="menu">
+                        <a href="/">
+                          <p>{seo.lang.sv.afterText}</p>
+                          
+                          <span className="button">{seo.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                      <span id="menu">
+                        <a href="/">
+                          <p>{copywrite.lang.sv.afterText}</p>
+                          
+                          <span className="button">{copywrite.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                      <span id="menu">
+                        <a href="/">
+                          <p>{design.lang.sv.afterText}</p>
+                          
+                          <span className="button">{design.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                      <span id="menu">
+                        <a href="/">
+                          <p>{programming.lang.sv.afterText}</p>
+                          
+                          <span className="button">{programming.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                      <span id="menu">
+                        <a href="/">
+                          <p>{vision.lang.sv.afterText}</p>
+                          
+                          <span className="button">{vision.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                      <span id="menu">
+                        <a href="/">
+                          <p>{nordiskTeknologi.lang.sv.afterText}</p>
+                          
+                          <span className="button">{nordiskTeknologi.lang.sv.beforeText}</span>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </Row>
+              </Col>
+            </Container>
           </section>  
         </>
       </>

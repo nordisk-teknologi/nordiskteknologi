@@ -25,12 +25,20 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
-import user from './app/reducers/userReducer';
+import userReducer from './app/reducers/userReducer';
+import navigationReducer from './app/reducers/navigationReducer';
 
-export default createStore(
+const store = createStore(
     combineReducers({
-        user
+        user: userReducer,
+        navigation: navigationReducer
     }),
     {},
     applyMiddleware(logger, thunk)
 );
+
+store.subscribe(() => {
+    console.log(store.getState());
+})
+
+export default store;

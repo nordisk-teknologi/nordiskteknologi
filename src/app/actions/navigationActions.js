@@ -22,10 +22,129 @@
  */
 
 module.exports = {
-    onEncryptionHover: (payload) => {
+    menu: (open) => {
+        try {
+            if (open === true) {
+                return {
+                    type: 'menu',
+                    style: 'fullscreen-menu-active',
+                    show: true,
+                }
+            } 
+                return {
+                    type: 'menu',
+                    style: 'fullscreen-menu',
+                    show: false,
+                }
+            
+            
+        } catch (error) {
+            if (error) throw new Error(error);
+        }
+        return open;
+    },
+    encryption: (object) => {
         return {
-            type: 'on_encryption_hover',
-            payload: payload
+            type: 'encryption',
+            payload: {
+                encryption: {
+                    lang: {
+                      sv: {
+                        status: object.status,
+                        after: object.after,
+                        before: object.before,
+                        afterText: "VI GÖR DIN HEMSIDA SÄKER",
+                        beforeText: "KRYPTERING"
+                      },
+                      en: {
+                        status: false,
+                        after: false,
+                        before: true,
+                        afterText: "WE SECURE YOUR WEBSITE",
+                        beforeText: "ENCRYPTION"
+                      },
+                    },
+                  },
+            }
+        }
+    },
+    seo: (object) => {
+        return {
+            type: 'seo',
+            payload: object
+        }
+    },
+    copywrite: (object) => {
+        return {
+            type: 'copywrite',
+            payload: object
+        }
+    },
+    design: (object) => {
+        return {
+            type: 'design',
+            payload: object
+        }
+    },
+    programming: (object) => {
+        return {
+            type: 'programming',
+            payload: object
+        }
+    },
+    vision: (object) => {
+        return {
+            type: 'vision',
+            payload: object
+        }
+    },
+    nordiskTeknologi: (object) => {
+        return {
+            type: 'nordiskTeknologi',
+            payload: object
+        }
+    },
+
+    encryptionType: (object) => {
+        return {
+            type: 'encryption',
+            payload: object
+        }
+    },
+    seoType: (object) => {
+        return {
+            type: 'seo',
+            payload: object
+        }
+    },
+    copywriteType: (object) => {
+        return {
+            type: 'copywrite',
+            payload: object
+        }
+    },
+    designType: (object) => {
+        return {
+            type: 'design',
+            payload: object
+        }
+    },
+    programmingType: (object) => {
+        return {
+            type: 'programming',
+            payload: object
+        }
+    },
+    visionType: (object) => {
+        return {
+            type: 'vision',
+            payload: object
+        }
+    },
+    nordiskTeknologiType: (object) => {
+        return {
+            type: 'nordiskTeknologi',
+            payload: object
         }
     }
 };

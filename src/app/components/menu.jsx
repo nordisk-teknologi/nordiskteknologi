@@ -40,13 +40,13 @@ const Menu = class extends React.Component {
             })
         } else {
             this.setState({
-                show: false
+                show
             })
         }
     }
 
     render() {
-        const { show } = this.state;
+      const { show } = this.state;
         return (
           <>
             <Button variant="primary" onClick={this.closeMenu}>
