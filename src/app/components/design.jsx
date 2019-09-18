@@ -20,40 +20,38 @@
  *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *   SOFTWARE.
  */
-/* eslint-disable max-len */
 import React from 'react';
-import { connect } from 'react-redux';
-import Layout from './layout';
-import NavigationBar from '../components/navigation';
-import Design from '../components/design';
-import Copywrite from '../components/copywrite';
-import { setName } from '../actions/userActions';
+import { Container, Col, Row } from 'react-bootstrap';
+import design from  "../assets/png/design.png"
 
-const App = () => {
-  return(
-    <div className="App overflow-hidden">
-      <section className="fullscreen">
-        <Design />
-      </section>
-      <section className="fullscreen">
-        <Copywrite />
-      </section>
-    </div>
-  )
-}
-
-const mapStateToProps = (state) => {
-  return {
-    user: state.user,
-  }
+const Design = () => {
+    return (
+      <>
+        <Row>
+          <Col md="4" sm="6" lg="6" className="design-left-sid  text-center overflow-hidden">
+            <img className="design-image" src={design} alt="design" />
+          </Col>
+          <Col md="8" sm="6" lg="6" className="design-right-sid overflow-hidden">
+            <Container>
+              <div className="col-10 design-container">
+                <p className="design-text design-title">
+                Dålig design är som ett dåligt skämt.
+                  <br />
+                Krävs förklaring, krävs förbättring. 
+                </p>
+                <p className="design-text design-subtitle">
+                Vi skapar eller förbättrar logotyper, hemsidor,
+                  <br />
+                grafiska profiler och presentationer. Anpassat
+                efter ditt företags vision och önskemål. 
+                </p>
+              </div>
+            </Container>
+          </Col>
+            
+        </Row>
+      </>
+    )
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setName: (name) => {
-      dispatch(setName(name));
-    }
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default Design;

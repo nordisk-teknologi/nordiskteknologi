@@ -20,40 +20,37 @@
  *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *   SOFTWARE.
  */
-/* eslint-disable max-len */
-import React from 'react';
-import { connect } from 'react-redux';
-import Layout from './layout';
-import NavigationBar from '../components/navigation';
-import Design from '../components/design';
-import Copywrite from '../components/copywrite';
-import { setName } from '../actions/userActions';
 
-const App = () => {
-  return(
-    <div className="App overflow-hidden">
-      <section className="fullscreen">
-        <Design />
-      </section>
-      <section className="fullscreen">
-        <Copywrite />
-      </section>
-    </div>
-  )
+import React from 'react';
+import { Container, Col, Row } from 'react-bootstrap';
+import book from "../assets/png/book.png";
+
+const Copyright = () => {
+    return (
+      <>
+        <Row>
+          <Col md="8" sm="6" lg="6">
+            <Container>
+              <div className="col-10 design-container">
+                <p className="design-text copywrite-title">
+                Vi skriver historia.
+                </p>
+                <p className="design-text copywrite-subtitle">
+                Vi skapar inspirerande och ögonöppnande
+                  <br />
+                texter till din hemsida. Innehållet är anpassade
+                  <br />
+                till din affärsidé, layouten är snygg och enkel.
+                </p>
+              </div>
+            </Container>
+          </Col>
+          <Col md="4" sm="6" lg="6" className="copywrite-right-sid">
+            <img className="col-6 center" src={book} alt="design" />
+          </Col>
+        </Row>
+      </>
+    )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    user: state.user,
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setName: (name) => {
-      dispatch(setName(name));
-    }
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default Copyright;
