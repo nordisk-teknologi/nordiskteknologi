@@ -47,7 +47,7 @@ const App = () => {
       <section id="Copywrite" className="fullscreen">
         <Copywrite />
       </section>
-      <section id="AI" className="fullscreen">
+      <section id="AI" className="fullscreen-x2">
         <AI />
       </section>
       <section id="Programmering" className="fullscreen">
@@ -56,7 +56,7 @@ const App = () => {
       <section id="Encryption" className="fullscreen">
         <Encryption />
       </section>
-      <section id="Encryption" className="fullscreen">
+      <section id="Encryption" className="fullscreen-x2">
         <Contact />
       </section>
     </div>

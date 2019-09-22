@@ -36,14 +36,19 @@ const AI = () => {
             <Col md="4" sm="6" lg="12">
               <div className="col-10 design-container">
                 <p className="design-text ai-title">
-                Vi skriver historia.
+                Vår vision.
+                  <br />
+                För precision. 
                 </p>
                 <p className="design-text ai-subtitle">
-                Vi skapar inspirerande och ögonöppnande
+                Vi tar beslut baserade på data, både internt och för våra 
+                  {' '}
                   <br />
-                texter till din hemsida. Innehållet är anpassade
+                  {' '}
+                kunder. Vi kan erbjuda ditt företag skräddarsydda
                   <br />
-                till din affärsidé, layouten är snygg och enkel.
+                  {' '}
+                AI-system och avancerade dataanalyser.
                 </p>
               </div>
             </Col>

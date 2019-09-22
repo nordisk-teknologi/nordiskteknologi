@@ -33,7 +33,11 @@ const Copyright = () => {
             <Container>
               <div className="col-10 design-container">
                 <p className="design-text copywrite-title">
-                Vi skriver historia.
+                Vi stärker ditt 
+                  {' '}
+                  <br />
+                  {' '}
+                  varumärke med text.
                 </p>
                 <p className="design-text copywrite-subtitle">
                 Vi skapar inspirerande och ögonöppnande

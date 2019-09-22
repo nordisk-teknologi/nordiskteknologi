@@ -30,7 +30,7 @@ const programmering = () => {
       <>
         <Row>
           <Col md="4" sm="6" lg="6" className="programmering-right-sid">
-            <img className="col-6 center" src={code} alt="design" />
+            <img className="col-10 center" src={code} alt="design" />
           </Col>
           <Col md="8" sm="6" lg="6">
             <Container>
