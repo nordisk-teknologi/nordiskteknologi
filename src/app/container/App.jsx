@@ -27,16 +27,37 @@ import Layout from './layout';
 import NavigationBar from '../components/navigation';
 import Design from '../components/design';
 import Copywrite from '../components/copywrite';
+import AI from '../components/ai';
+import Programmering from '../components/programmering';
+import Encryption from '../components/encryption';
+import Contact from '../components/contact';
 import { setName } from '../actions/userActions';
 
 const App = () => {
-  return(
+  return (
+  
     <div className="App overflow-hidden">
-      <section className="fullscreen">
+      <NavigationBar />
+      <section id="about-us" className="fullscreen">
+        <Layout />
+      </section>
+      <section id="design" className="fullscreen">
         <Design />
       </section>
-      <section className="fullscreen">
+      <section id="Copywrite" className="fullscreen">
         <Copywrite />
+      </section>
+      <section id="AI" className="fullscreen">
+        <AI />
+      </section>
+      <section id="Programmering" className="fullscreen">
+        <Programmering />
+      </section>
+      <section id="Encryption" className="fullscreen">
+        <Encryption />
+      </section>
+      <section id="Encryption" className="fullscreen">
+        <Contact />
       </section>
     </div>
   )

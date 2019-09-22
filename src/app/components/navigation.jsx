@@ -24,8 +24,9 @@
 import React from 'react';
 import { Navbar, Form, Container, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Link } from "react-scroll";
 import navigationStates from '../states/navigation.state';
 
 class NavigationBar extends React.Component {
@@ -58,22 +59,101 @@ class NavigationBar extends React.Component {
     const { encryption, seo, copywrite, design, programming, vision, nordiskTeknologi} = this.state
     return (
       <>
-        <Navbar className="navbar justify-content-between">
+        <Navbar className="navbar justify-content-center">
           <Form inline>
-            <a className="active space-left" href="#about-us">Om oss</a>
-            <a href="#design">Design</a>
-            <a href="#Copywrite">Copywrite</a>
-            <a href="#SEO">SEO</a>
-            <a href="#Programmering">Programmering</a>
-            <a href="#Kryptering">Kryptering</a>
-            <a href="#Vision">Vision</a>
-            <a href="#Kontakt">Kontakt</a>
+            <div>
+              <Link
+                activeClass="active"
+                to="about-us"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Om oss
+              </Link>
+              <Link
+                activeClass="active"
+                to="design"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Design
+              </Link>
+              <Link
+                activeClass="active"
+                to="Copywrite"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Copywrite
+              </Link>
+              <Link
+                activeClass="active"
+                to="SEO"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              SEO
+              </Link>
+              <Link
+                activeClass="active"
+                to="AI"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              AI
+              </Link>
+              <Link
+                activeClass="active"
+                to="Programmering"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Programmering
+              </Link>
+              <Link
+                activeClass="active"
+                to="Encryption"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Kryptering
+              </Link>
+              <Link
+                activeClass="active"
+                to="Vision"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Vision
+              </Link>
+              <Link
+                activeClass="active"
+                to="Kontakt"
+                spy
+                smooth
+                offset={-70}
+                duration={500}
+              >
+              Kontakt
+              </Link>
+            </div>
           </Form>
-          <Form inline>
-              
-            <spen className="menu" onClick={this.closeMenu}><FontAwesomeIcon size="2x" icon={faBars} className="center" /></spen>
-          </Form>
-          
         </Navbar>
         <>
           <section className={menu.style}>

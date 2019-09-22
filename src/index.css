@@ -4,6 +4,48 @@
   src: url('../src/app/assets/fonts/SF-Compact-Display-Regular.otf'); /* IE9 Compat Modes */
 }
 
+:root {
+  /* generic */
+  --gutterSm: 0.4rem;
+  --gutterMd: 0.8rem;
+  --gutterLg: 1.6rem;
+  --gutterXl: 2.4rem;
+  --gutterXx: 7.2rem;
+  --colorPrimary400: #7e57c2;
+  --colorPrimary600: #5e35b1;
+  --colorPrimary800: #4527a0;
+  --fontFamily: 'Dosis', sans-serif;
+  --fontSizeSm: 1.2rem;
+  --fontSizeMd: 1.6rem;
+  --fontSizeLg: 2.1rem;
+  --fontSizeXl: 2.8rem;
+  --fontSizeXx: 3.6rem;
+  --lineHeightSm: 1.1;
+  --lineHeightMd: 1.8;
+  --transitionDuration: 300ms;
+  --transitionTF: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* floated labels */
+  --inputPaddingV: var(--gutterMd);
+  --inputPaddingH: var(--gutterLg);
+  --inputFontSize: var(--fontSizeLg);
+  --inputLineHeight: var(--lineHeightMd);
+  --labelScaleFactor: 0.8;
+  --labelDefaultPosY: 50%;
+  --labelTransformedPosY: calc(
+    (var(--labelDefaultPosY)) - (var(--inputPaddingV) * var(--labelScaleFactor)) -
+      (var(--inputFontSize) * var(--inputLineHeight))
+  );
+  --inputTransitionDuration: var(--transitionDuration);
+  --inputTransitionTF: var(--transitionTF);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .primary_color {
   background: #70e6d4;
 }
@@ -635,4 +677,212 @@
   font-size: 35px;
   line-height: 55px;
   color: #333333;
+}
+
+.ai {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.ai-title {
+  margin-top: 2.5%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 75px;
+  color: #171717;
+}
+
+.ai-subtitle {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 55px;
+  color: #333333;
+}
+
+.programmering-right-sid {
+  background-color: #2e2e2e;
+  min-height: 100vh;
+}
+
+.programmering-title {
+  margin-top: 25%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 65px;
+  color: #171717;
+}
+
+.programmering-subtitle {
+  margin-top: 5%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  color: #171717;
+}
+
+.programmering-subtitle span {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  color: #8c8c8c;
+}
+
+.bot-right-sid {
+  background-color: #0098ff;
+  min-height: 100vh;
+}
+
+.bot-title {
+  margin-top: 50%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 75px;
+  color: #171717;
+}
+
+.bot-subtitle {
+  margin-top: 5%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 55px;
+  color: #333333;
+}
+
+.contact-right-sid {
+  background-color: #fff3e3;
+  min-height: 100vh;
+}
+
+.contact-right-sid-p {
+  margin-top: 95%;
+  margin-left: 25%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #171717;
+}
+
+.Input-text {
+  display: block;
+  margin-top: 30px;
+  padding: var(--inputPaddingV) var(--inputPaddingH);
+  color: inherit;
+  width: 100%;
+  border: 2px solid #cfcfcf;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: box-shadow var(--transitionDuration);
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  color: #444444;
+}
+
+.Input-text::placeholder {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  color: #444444;
+}
+
+.Input-text:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 2.6rem #d1d1d1;
+}
+
+.Input-textarea {
+  display: block;
+  margin-top: 30px;
+  padding: var(--inputPaddingV) var(--inputPaddingH);
+  color: inherit;
+  width: 100%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  color: #444444;
+  border: 2px solid #cfcfcf;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: box-shadow var(--transitionDuration);
+}
+
+.Input-textarea::placeholder {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  color: #444444;
+}
+
+.Input-textarea:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 2.6rem #d1d1d1;
+}
+
+.contact-button {
+  margin-top: 30px;
+  width: 100%;
+  height: 71px;
+  background: #70e6d4;
+  border-radius: 5px;
+  border: none;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  color: #444444;
+}
+
+hr {
+  margin-top: 90%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #cfcfcf;
+}
+
+.phone-text {
+  margin-top: 8%;
+  margin-left: 15%;
+  margin-right: auto;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: #444444;
+}
+
+.phone-number {
+  margin-left: 15%;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  color: #171717;
 }
