@@ -23,7 +23,6 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { connect } from 'react-redux';
-import Layout from './layout';
 import NavigationBar from '../components/navigation';
 import Design from '../components/design';
 import Copywrite from '../components/copywrite';
@@ -31,6 +30,7 @@ import AI from '../components/ai';
 import Programmering from '../components/programmering';
 import Encryption from '../components/encryption';
 import Contact from '../components/contact';
+import AboutUs from '../components/aboutus';
 import { setName } from '../actions/userActions';
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
     <div className="App overflow-hidden">
       <NavigationBar />
       <section id="about-us" className="fullscreen">
-        <Layout />
+        <AboutUs />
       </section>
       <section id="design" className="fullscreen">
         <Design />
