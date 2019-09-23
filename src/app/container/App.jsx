@@ -38,7 +38,7 @@ const App = () => {
   
     <div className="App overflow-hidden">
       <NavigationBar />
-      <section id="about-us" className="fullscreen">
+      <section id="about-us" className="fullscreen-x">
         <AboutUs />
       </section>
       <section id="design" className="fullscreen">
@@ -56,7 +56,7 @@ const App = () => {
       <section id="Encryption" className="fullscreen">
         <Encryption />
       </section>
-      <section id="Encryption" className="fullscreen-x2">
+      <section id="Kontakt" className="fullscreen-x2">
         <Contact />
       </section>
     </div>

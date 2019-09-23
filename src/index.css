@@ -139,6 +139,11 @@
   min-height: 100vh;
 }
 
+.fullscreen-x {
+  background-color: #fbfbfb;
+  min-height: 100vh;
+}
+
 .fullscreen-x2 {
   min-height: 110vh;
 }
@@ -889,5 +894,20 @@ hr {
   font-weight: bold;
   font-size: 60px;
   line-height: 70px;
+  color: #171717;
+}
+
+.about-l {
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -0%);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
   color: #171717;
 }

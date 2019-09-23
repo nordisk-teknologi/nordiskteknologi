@@ -94,16 +94,6 @@ class NavigationBar extends React.Component {
               </Link>
               <Link
                 activeClass="active"
-                to="SEO"
-                spy
-                smooth
-                offset={-70}
-                duration={500}
-              >
-              SEO
-              </Link>
-              <Link
-                activeClass="active"
                 to="AI"
                 spy
                 smooth
@@ -131,16 +121,6 @@ class NavigationBar extends React.Component {
                 duration={500}
               >
               Kryptering
-              </Link>
-              <Link
-                activeClass="active"
-                to="Vision"
-                spy
-                smooth
-                offset={-70}
-                duration={500}
-              >
-              Vision
               </Link>
               <Link
                 activeClass="active"

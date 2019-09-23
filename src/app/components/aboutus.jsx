@@ -23,12 +23,18 @@
 
 import React from 'react';
 import Particles from 'react-particles-js';
+import { Col, Row } from 'react-bootstrap';
 import logo from "../assets/svg/small.svg";
 
 const AboutUs = () => {
     return (
-      <Particles
-        params={{
+      <div>
+        
+            
+        <Row>
+          <Col md="4" sm="6" lg="12">
+            <Particles
+              params={{
             "fps_limit": 60,
                 "particles": {
                     "color": {
@@ -93,12 +99,20 @@ const AboutUs = () => {
                 }
             }
             }}
-        style={{
+              style={{
             width: '100%',
-            minHeight: '110vh',
-            backgroundColor: `#fbfbfb` 
-            }}
-      />
+            minHeight: '80vh',
+                }}
+            />
+            <p className="about-l">
+            Förvandla din hemsidas besökare till kunder.
+              <br />
+            Genom kreativitet, teknologi och strategi.
+            </p>
+          </Col>
+        </Row>
+      </div>
+      
     )
 }
 export default AboutUs;
